@@ -1,6 +1,7 @@
 fastapi
 uvicorn
 sqlalchemy
+sqlalchemy_media
 databases
 databases[postgresql]
 psycopg2-binary
