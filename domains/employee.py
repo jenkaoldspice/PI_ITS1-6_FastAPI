@@ -10,3 +10,9 @@ class Employee(BaseModel):
     email: EmailStr
     updated_at: datetime
     created_at: datetime
+
+
+class EmployeeIn(BaseModel):
+    name: str
+    surname: str
+    email: EmailStr
