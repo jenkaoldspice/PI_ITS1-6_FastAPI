@@ -7,16 +7,16 @@ from repositories.employees import EmployeeRepository
 router = APIRouter()
 
 @router.get("/all")
-async def read_users(
-        users: EmployeeRepository = Depends(get_employee_repository),
+async def read_employees(
+        employees: EmployeeRepository = Depends(get_employee_repository),
         limit: int = 100,
         skip: int = 100):
-    return await users.get_all(limit=limit, skip=0)
+    return await employees.get_all(limit=limit, skip=0)
 
 
 @router.post("/sign-up", response_model=Employee)
-async def create(employee: EmployeeIn, employees: EmployeeRepository = Depends(get_employee_repository())):
-    return await employees.create(e=employee)
+async def create(employee: EmployeeIn, employees: EmployeeRepository = Depends(get_employee_repository)):
+    return await employees.create(u=employee)
 
 @router.delete("/delete")
 async def delete(id: int, employees: EmployeeRepository = Depends(get_employee_repository)) -> Employee:

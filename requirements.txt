@@ -9,3 +9,4 @@ passlib
 pydantic[email]
 bcrypt
 python-jose
+jinja2

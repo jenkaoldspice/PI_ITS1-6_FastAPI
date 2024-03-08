@@ -1,6 +1,12 @@
 from typing import Optional
-from pydantic import BaseModel, EmailStr, HttpUrl
+from pydantic import BaseModel, EmailStr
 from datetime import datetime
+
+
+class EmployeeIn(BaseModel):
+    name: str
+    surname: str
+    email: EmailStr
 
 
 class Employee(BaseModel):
@@ -10,15 +16,3 @@ class Employee(BaseModel):
     email: EmailStr
     updated_at: datetime
     created_at: datetime
-
-
-class EmployeeIn(BaseModel):
-    name: str
-    surname: str
-    email: EmailStr
-
-class EmployeeImage(BaseModel):
-    url: HttpUrl
-    name: str
-    type: str
-    creation_date: datetime
