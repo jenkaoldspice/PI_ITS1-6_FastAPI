@@ -93,11 +93,12 @@
             <div class="container">
                 <h2 class="team_title">Our Team</h2>
                 <ul class="team_list">
+                    {% for dict in all_employees %}
                     <li class="team_list_item">
-                        <img srcset="../static/images/team/img1.png 1x, ../static/images/team/img1-2x.png 2x" src="../static/images/team/img1.png" alt="Mark Guerrero" width="264" height="260">
+                        <img src="{{ dict['avatar_link'] }}" alt="{{ dict['name'] }} {{ dict['surname'] }}", width="264" height="260">
                         <div class="team_text_wrapper">
-                            <h3 class="team_list_title">Mark Guerrero</h3>
-                            <p class="team_list_text text_space">Product Designer</p>
+                            <h3 class="team_list_title">{{ dict['name'] }} {{ dict['surname'] }}</h3>
+                            <p class="team_list_text text_space">{{ dict['position'] }}</p>
                             <ul class="team_icon_list">
                                 <li class="team_icon_list_item">
                                     <a href="#" class="team_icon_a">
@@ -130,118 +131,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="team_list_item">
-                        <img srcset="../static/images/team/img2.jpg 1x, ../static/images/team/img2-2x.png 2x" src="../static/images/team/img2.jpg" alt="Tom Ford" width="264" height="260">
-                        <div class="team_text_wrapper">
-                            <h3 class="team_list_title">Tom Ford</h3>
-                            <p class="team_list_text text_space">Frontend Developer</p>
-                            <ul class="team_icon_list">
-                                <li class="team_icon_list_item">
-                                    <a href="#" class="team_icon_a">
-                                        <svg class="soc_icon_svg" width="16" height="16">
-                                            <use href ="../static/images/icons.svg#icon-instagram-2"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="team_icon_list_item">
-                                    <a href="#" class="team_icon_a">
-                                        <svg class="soc_icon_svg" width="16" height="16">
-                                            <use href ="../static/images/icons.svg#icon-twitter-1"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="team_icon_list_item">
-                                    <a href="#" class="team_icon_a">
-                                        <svg class="soc_icon_svg" width="16" height="16">
-                                            <use href ="../static/images/icons.svg#icon-facebook-1"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="team_icon_list_item">
-                                    <a href="#" class="team_icon_a">
-                                        <svg class="soc_icon_svg" width="16" height="16">
-                                            <use href ="../static/images/icons.svg#icon-linkedin-1"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="team_list_item">
-                        <img srcset="../static/images/team/img3.jpg 1x, ../static/images/team/img3-2x.png 2x" src="../static/images/team/img3.jpg" alt="Camila Garcia" width="264" height="260">
-                        <div class="team_text_wrapper">
-                            <h3 class="team_list_title">Camila Garcia</h3>
-                            <p class="team_list_text text_space">Marketing</p>
-                            <ul class="team_icon_list">
-                                <li class="team_icon_list_item">
-                                    <a href="#" class="team_icon_a">
-                                        <svg class="soc_icon_svg" width="16" height="16">
-                                            <use href ="../static/images/icons.svg#icon-instagram-2"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="team_icon_list_item">
-                                    <a href="#" class="team_icon_a">
-                                        <svg class="soc_icon_svg" width="16" height="16">
-                                            <use href ="../static/images/icons.svg#icon-twitter-1"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="team_icon_list_item">
-                                    <a href="#" class="team_icon_a">
-                                        <svg class="soc_icon_svg" width="16" height="16">
-                                            <use href ="../static/images/icons.svg#icon-facebook-1"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="team_icon_list_item">
-                                    <a href="#" class="team_icon_a">
-                                        <svg class="soc_icon_svg" width="16" height="16">
-                                            <use href ="../static/images/icons.svg#icon-linkedin-1"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="team_list_item">
-                        <img srcset="../static/images/team/img4.png 1x, ../static/images/team/img4-2x.png 2x" src="../static/images/team/img4.png" alt="Daniel Wilson" width="264" height="260">
-                        <div class="team_text_wrapper">
-                            <h3 class="team_list_title">Daniel Wilson</h3>
-                            <p class="team_list_text text_space">UI Designer</p>
-                            <ul class="team_icon_list">
-                                <li class="team_icon_list_item">
-                                    <a href="#" class="team_icon_a">
-                                        <svg class="soc_icon_svg" width="16" height="16">
-                                            <use href ="../static/images/icons.svg#icon-instagram-2"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="team_icon_list_item">
-                                    <a href="#" class="team_icon_a">
-                                        <svg class="soc_icon_svg" width="16" height="16">
-                                            <use href ="../static/images/icons.svg#icon-twitter-1"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="team_icon_list_item">
-                                    <a href="#" class="team_icon_a">
-                                        <svg class="soc_icon_svg" width="16" height="16">
-                                            <use href ="../static/images/icons.svg#icon-facebook-1"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="team_icon_list_item">
-                                    <a href="#" class="team_icon_a">
-                                        <svg class="soc_icon_svg" width="16" height="16">
-                                            <use href ="../static/images/icons.svg#icon-linkedin-1"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
+                    {% endfor %}
             </div>
         </section> 
          <section class="portfolio">

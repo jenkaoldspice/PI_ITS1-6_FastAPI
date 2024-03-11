@@ -22,6 +22,8 @@ class EmployeeRepository(BaseRepository):
                 "name": None,
                 "surname": None,
                 "email": None,
+                "position": None,
+                "avatar_link": None,
                 "created_at": None,
                 "updated_at": None}
         return Employee.parse_obj(employee_response)
@@ -31,6 +33,8 @@ class EmployeeRepository(BaseRepository):
             name=u.name,
             surname=u.surname,
             email=u.email,
+            position=u.position,
+            avatar_link=u.avatar_link,
             created_at=datetime.utcnow(),
             updated_at=datetime.utcnow(),
         )

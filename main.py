@@ -33,8 +33,11 @@ async def startup():
 
 
 @app.get('/')
-async def mainpage(request: Request):
-    return templates.TemplateResponse('index.html', context={'request': request}) \
+async def mainpage(request: Request,
+                   employeers: EmployeeRepository = Depends(get_employee_repository)):
+    all_employees = await employeers.get_all()
+    return templates.TemplateResponse('index.html', context={'request': request,
+                                                             'all_employees': all_employees}) \
 
 if __name__ == "__main__":
     uvicorn.run("main:app", port=8000, reload=True)
